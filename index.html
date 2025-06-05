@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DMIC | Disruptive Microfabrication & Integrated Components</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #0a2f55;
+      --accent: #218144;
+      --bg: #ffffff;
+      --text: #222222;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: var(--primary);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 2rem;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 600;
+      transition: opacity 0.3s ease;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    main {
+      padding-top: 0;
+    }
+
+    section {
+      padding: 40px 0;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    section.reveal {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
+    .section-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .hero {
+      background-color: #f2f6fa;
+      text-align: center;
+      padding: calc(0.75rem * 2 + 40px) 0 40px;
+      margin-top: 0;
+      width: 100%;
+    }
+
+    .hero .section-content {
+      padding: 0 15px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background-color: white;
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      margin-top: 40px;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 0.75rem 0;
+      margin-top: 0;
+      width: 100%;
+    }
+
+    .button {
+      background-color: var(--primary);
+      color: white;
+      padding: 1rem 2rem;
+      display: inline-block;
+      border-radius: 5px;
+      margin-top: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .button-container {
+      text-align: right;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .button-container {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logoDMIC.jpeg" alt="Logo DMIC" />
+      <strong>DMIC</strong>
+    </div>
+    <nav>
+      <a href="#home">HOME</a>
+      <a href="#sobre">SOBRE</a>
+      <a href="#tecnologia">TECNOLOGIA</a>
+      <a href="#investidores">INVESTIDORES</a>
+      <a href="#contato">CONTATO</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="section-content">
+        <h1>INVISTA NA TECNOLOGIA DO FUTURO</h1>
+        <p>A nova neração de sensores já está aqui, e você pode fazer parte disso! A DMIC desenvolveu um microsensor de alta precisão, com processo de fabricação exclusivo!</p>
+        <div class="button-container">
+          <a class="button" href="#investidores">Saiba Mais</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="section-content">
+        <h2>Sobre a DMIC</h2>
+        <p>A DMIC é uma empresa focada em soluções de microfabricação de sensores de alta performance. De forma que possa agregar valor e resultado para públicos das mais diversas áreas, desde fornecedores à clientes finais.</p>
+      </div>
+    </section>
+
+    <section id="tecnologia">
+      <div class="section-content">
+        <h2>Diferenciais</h2>
+        <div class="grid">
+          <div class="card">Processo flexível e adaptável</div>
+          <div class="card">Alta reprodutibilidade e precisão</div>
+          <div class="card">Estrutura robusta para diversas aplicações industriais e ambientais</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="investidores">
+      <div class="section-content">
+        <h2>Por que investir na DMIC?</h2>
+        <div class="grid">
+          <div class="card">Tecnologia proprietária com diferencial competitivo em microfabricação</div>
+          <div class="card">Mercado em expansão: sensores são essenciais na automação, saúde e IoT</div>
+          <div class="card">Prototipagem validada com metodologia científica</div>
+          <div class="card">Alta margem de crescimento com potencial para licenciamento e escalonamento industrial</div>
+          <div class="card">Equipe com expertise acadêmica e técnica</div>
+          <div class="card">Modelo escalável com baixo custo de produção por unidade</div>
+        </div>
+        <h3>Buscamos:</h3>
+        <div class="grid">
+          <div class="card">Investidores-anjo ou fundos de seed capital</div>
+          <div class="card">Parcerias com indústrias de sensores, universidades e centros de inovação</div>
+          <div class="card">Aportes para estruturação de linha piloto e certificações</div>
+        </div>
+        <div class="button-container">
+          <a class="button" href="mailto:invest@dmic.tech">Quero Investir</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="section-content">
+        <h2>Entre em Contato</h2>
+        <p>contato@dmic.tech</p>
+        <p>Envie um e-mail para <strong>invest@dmic.tech</strong> ou preencha o formulário no site para receber o nosso pitch deck e dataroom técnico.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DMIC. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    const options = {
+      threshold: 0.2,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal');
+        } else {
+          entry.target.classList.remove('reveal');
+        }
+      });
+    }, options);
+
+    sections.forEach(section => {
+      // Não observa a seção hero para evitar scroll automático
+      if (!section.classList.contains('hero')) {
+        observer.observe(section);
+      }
+    });
+
+    // Adiciona animação para cards individuais
+    const cards = document.querySelectorAll('.card');
+    const cardOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -30px 0px'
+    };
+
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }, index * 100);
+        }
+      });
+    }, cardOptions);
+
+    cards.forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(30px)';
+      card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+      cardObserver.observe(card);
+    });
+  </script>
+</body>
+</html>
